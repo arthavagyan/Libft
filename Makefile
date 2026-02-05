@@ -6,7 +6,7 @@
 #    By: artavagy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/05 15:05:09 by artavagy          #+#    #+#              #
-#    Updated: 2026/02/05 17:42:47 by artavagy         ###   ########.fr        #
+#    Updated: 2026/02/05 20:44:27 by artavagy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
@@ -32,6 +32,6 @@ clean :
 	rm -f  *.o
 
 fclean : clean
-	rm -f $(NAME) main
+	rm -f $(NiAME) main
 re: fclean all
 .PHONY: all clean fclean re

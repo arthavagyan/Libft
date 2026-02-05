@@ -6,8 +6,12 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:50:05 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/04 19:50:12 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/05 17:59:10 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	
+}
