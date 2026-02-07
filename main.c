@@ -6,11 +6,11 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 21:52:23 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/05 20:28:32 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/07 17:41:06 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
 int	main(void)
 {
 //	IS_ALPHA
@@ -142,3 +142,4 @@ int	main(void)
                 printf("%c\n", strdup_r[i]);
         free(strdup_r);
 }
+*/

@@ -6,29 +6,29 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 19:50:05 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/06 18:12:46 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/07 18:42:08 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	size_str;
-	size_t	size_re;
-	char	*s_point;
+	size_t	s_len;
+	size_t	substr_len;
 	char	*result;
 
-	size_str = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	s_point = (char *)s + start;
-	if (ft_strlen(s_point) < len)
-		size_re = ft_strlen(s_point) + 1;
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (s_len - start < len)
+		substr_len = s_len - start + 1;
 	else
-		size_re = len + 1;
-	result = malloc(reslen * sizeof(char));
+		substr_len = len + 1;
+	result = malloc(substr_len);
 	if (!result)
 		return (NULL);
-	strlcpy(result, s_point, size_re);
+	ft_strlcpy(result, s + start, substr_len);
 	return (result);
 }
