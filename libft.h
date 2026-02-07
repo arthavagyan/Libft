@@ -6,7 +6,7 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 21:44:14 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/06 17:13:45 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/07 20:12:37 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -34,6 +34,7 @@ char	*ft_strrchr(const char *str, int symb);
 char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

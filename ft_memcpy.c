@@ -6,7 +6,7 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:55:19 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/07 18:05:46 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/07 19:06:11 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (!src && !dest)
 		return (NULL);
-
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;
