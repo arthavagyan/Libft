@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/07 20:03:24 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/07 21:31:53 by artavagy         ###   ########.fr       */
+/*   Created: 2026/02/07 22:22:33 by artavagy          #+#    #+#             */
+/*   Updated: 2026/02/07 22:45:24 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	s1_len;
-	size_t	s2_len;
-	char	*result;
+	size_t	start_point;
+	size_t	end_point;
+	char	*res;
 
-	if (!s1 || !s2)
+	start_point = 0;
+	end_point = ft_strlen(s1);
+	if (!s1 || !set)
 		return (NULL);
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	result = malloc(s1_len + s2_len + 1);
-	if (!result)
+	while (s1[start_point] && ft_strchr(set, s1[start_point]))
+		start_point++;
+	while (end_point > start_point && ft_strchr(set, s1[end_point - 1]))
+		end_point--;
+	res = malloc(end_point - start_point + 1);
+	if (!res)
 		return (NULL);
-	ft_strlcpy(result, s1, s1_len + 1);
-	ft_strlcat(result, s2, s1_len + s2_len + 1);
-	return (result);
+	ft_strlcpy(res, &s1[start_point], end_point - start_point + 1);
+	return (res);
 }
