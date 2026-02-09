@@ -6,11 +6,10 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 22:47:12 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/08 04:10:42 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/09 16:07:52 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-
+#include "libft.h"*
 char	**ft_split(char const *s, char c)
 {
 	size_t	w_len;
@@ -78,4 +77,20 @@ size_t	len_w(char const *s, char c)
 	while (s[len] && s[len] != c)
 		len++;
 	return (len);
+}if (s[i] != c && (i == 0 || s[i - 1] == c))
+                        count++;
+                i++;
+        }
+        return (count);
 }
+
+size_t  len_w(char const *s, char c)
+{
+        size_t  len;
+
+        len = 0;
+        while (s[len] && s[len] != c)
+                len++;
+        return (len);
+}
+
