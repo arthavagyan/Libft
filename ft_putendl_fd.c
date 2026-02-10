@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/11 01:51:21 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/11 02:41:05 by artavagy         ###   ########.fr       */
+/*   Created: 2026/02/11 02:46:57 by artavagy          #+#    #+#             */
+/*   Updated: 2026/02/11 02:50:29 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
+	size_t	i;
+	char	c;
+
+	c = '\n';
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 	write(fd, &c, 1);
 }
