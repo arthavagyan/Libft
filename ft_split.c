@@ -6,16 +6,54 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 22:47:12 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/09 16:07:52 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/09 19:55:21 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"*
+#include "libft.h"
+
+static char	**free_calloc(char **res, size_t i)
+{
+	while (i > 0)
+	{
+		free(res[i - 1]);
+		i--;
+	}
+	free(res);
+	return (NULL);
+}
+
+static size_t	num_w(char const *s, char c)
+{
+	size_t	i;
+	size_t	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
+	}
+	return (count);
+}
+
+static size_t	len_w(char const *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	w_len;
 	size_t	i;
 	size_t	j;
-	size_t len;
+	size_t	len;
 	char	**res;
 
 	i = 0;
@@ -41,56 +79,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-
-char	**free_calloc(char **res, size_t i)
-{
-	while (i > 0)
-	{
-		free(res[i - 1]);
-		i--;
-	}
-	free(res);
-	return (NULL);
-}
-
-size_t	num_w(char const *s, char c)
-{
-	size_t	i;
-	size_t	count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
-			count++;
-		i++;
-	}
-	return (count);
-}
-
-size_t	len_w(char const *s, char c)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	return (len);
-}if (s[i] != c && (i == 0 || s[i - 1] == c))
-                        count++;
-                i++;
-        }
-        return (count);
-}
-
-size_t  len_w(char const *s, char c)
-{
-        size_t  len;
-
-        len = 0;
-        while (s[len] && s[len] != c)
-                len++;
-        return (len);
-}
-
