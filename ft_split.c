@@ -6,7 +6,7 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 22:47:12 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/09 19:55:21 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/10 17:05:05 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -50,10 +50,8 @@ static size_t	len_w(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	w_len;
 	size_t	i;
 	size_t	j;
-	size_t	len;
 	char	**res;
 
 	i = 0;
@@ -61,18 +59,17 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	res = ft_calloc(num_w(s, c) + 1, sizeof(char *));
+	if (!res)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			w_len = len_w(&s[i], c);
-			res[j] = ft_calloc(w_len + 1, sizeof(char));
+			res[j] = ft_calloc(len_w(&s[i], c) + 1, sizeof(char));
 			if (!res[j])
 				return (free_calloc(res, j));
-			len = 0;
-			while (s[i] && s[i] != c)
-				res[j][len++] = s[i++];
-			j++;
+			ft_strlcpy(res[j++], &s[i], len_w(&s[i], c) + 1);
+			i += len_w(&s[i], c);
 		}
 		else
 			i++;
