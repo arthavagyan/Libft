@@ -6,16 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:29:29 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 17:31:40 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:23:47 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isalnum(int symb)
+int	ft_isalnum(int c)
 {
-	if ((symb >= 65 && symb <= 90) || (symb >= 97 && symb <= 122))
-		return (1);
-	else if (symb >= 48 && symb <= 57)
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }

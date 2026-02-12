@@ -6,14 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:56:52 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 17:32:11 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:47:29 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isprint(int symb)
+int	ft_isprint(int c)
 {
-	if (symb <= 126 && symb >= 32)
+	if (c <= 126 && c >= 32)
 		return (1);
 	return (0);
 }

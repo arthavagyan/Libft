@@ -6,14 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:48:33 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 16:37:55 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:28:24 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_toupper(int symb)
+int	ft_toupper(int c)
 {
-	if (symb <= 'z' && symb >= 'a')
-		symb -= 32;
-	return (symb);
+	if (c <= 'z' && c >= 'a')
+		c -= 32;
+	return (c);
 }

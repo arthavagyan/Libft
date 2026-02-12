@@ -6,14 +6,16 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 18:57:01 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/11 19:04:26 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 01:28:53 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst != NULL && lst->next != NULL)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

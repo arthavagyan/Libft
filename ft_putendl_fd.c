@@ -6,22 +6,17 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 02:46:57 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/11 02:50:29 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 01:13:27 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-	char	c;
-
-	c = '\n';
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		write(fd, s, 1);
+		s++;
 	}
-	write(fd, &c, 1);
+	write(fd, "\n", 1);
 }

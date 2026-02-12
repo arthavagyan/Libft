@@ -6,16 +6,17 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 21:44:14 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/12 01:22:04 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 00:52:42 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -66,4 +67,5 @@ void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
+
 #endif

@@ -6,14 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:53:53 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 17:35:52 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:48:25 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isascii(int symb)
+int	ft_isascii(int c)
 {
-	if (symb >= 0 && symb <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

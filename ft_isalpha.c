@@ -6,14 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 19:21:01 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 17:23:43 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:38:47 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isalpha(int symb)
+int	ft_isalpha(int c)
 {
-	if ((symb <= 90 && symb >= 65) || (symb <= 122 && symb >= 97))
+	if ((c <= 90 && c >= 65) || (c <= 122 && c >= 97))
 		return (1);
 	else
 		return (0);

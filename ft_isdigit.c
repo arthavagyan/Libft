@@ -6,14 +6,14 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:22:46 by artavagy          #+#    #+#             */
-/*   Updated: 2026/01/29 17:28:42 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:42:05 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isdigit(int symb)
+int	ft_isdigit(int c)
 {
-	if (symb >= 48 && symb <= 57)
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }

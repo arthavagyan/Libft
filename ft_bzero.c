@@ -6,21 +6,12 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 18:43:20 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/02 16:06:11 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 23:53:41 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*p;
-	size_t			i;
-
-	p = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		p[i] = '\0';
-		i++;
-	}
+	ft_memset (s, '\0', n);
 }

@@ -6,7 +6,7 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 17:06:37 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/07 18:25:58 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/12 06:00:52 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,7 +26,7 @@ int	ft_atoi(const char *nptr)
 			sign = -1;
 		nptr++;
 	}
-	while (*nptr <= '9' && *nptr >= '0')
+	while (ft_isdigit(*nptr))
 	{
 		result = (result * 10) + (*nptr - '0');
 		nptr++;
