@@ -6,12 +6,12 @@
 /*   By: artavagy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:40:29 by artavagy          #+#    #+#             */
-/*   Updated: 2026/02/11 01:18:27 by artavagy         ###   ########.fr       */
+/*   Updated: 2026/02/13 19:31:06 by artavagy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	number_len(long number)
+static size_t	number_len(long number)
 {
 	long	n;
 	size_t	len;
@@ -33,7 +33,7 @@ size_t	number_len(long number)
 	return (len);
 }
 
-void	if_negative(long *number, int *sign)
+static void	if_negative(long *number, int *sign)
 {
 	if (*number < 0)
 	{
