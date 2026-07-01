@@ -1,79 +1,91 @@
-# Libft
-*This project has been created as part of the 42 curriculum by artavagy.*
+# 📚 Libft — My Very Own C Library
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42" alt="Score 100/100" />
+  <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge" alt="Language C" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status Completed" />
+</p>
 
 ---
 
-## Description 
+## 📖 Description
 
-Libft is a personal C library that reimplements a set of standard libc functions, additional useful functions, and linked list operations.  
-It helps understand how standard C functions work under the hood and allows you to use your own library in future assignments.
+**Libft** is the first project at **42 School**. The goal is to create a personal library of useful C functions. Instead of using the standard library, we write our own versions from scratch. 
 
+This project is the "foundation" for everything that comes next. I will use this library in almost every future project at 42.
 
-## Project Goal 
+---
 
-- Reimplement libc functions with the `ft_` prefix.  
-- Create useful string, memory, and linked list manipulation functions.  
-- Understand memory allocation, pointers, and linked list operations.  
+## 🎯 Project Goal
 
+- Understand how standard C functions (like `strlen` or `memcpy`) work "under the hood."
+- Learn how to manage memory and use pointers correctly.
+- Build a collection of tools for string manipulation and linked lists.
+- Get comfortable with creating a **Makefile**.
 
-## Instructions 
+---
+
+## 🛠️ How to Use
 
 ### Compilation
+To build the library, run the following command in your terminal:
 
-To compile the library, run:
-
+```bash
 make
+```
+This will compile the code and create a static library file called `libft.a`.
 
-The library is compiled using the provided Makefile and the `cc` compiler with the following flags:
- 
- -Wall -Wextra -Werror
-
-
-This will generate the static library file `libft.a` at the root of the repository.
-
-### Makefile rules
-
-- make / make all  : To compile the library
-- make clean  : Remove object files
-- make fclean  : Remove object files and the library
-- make re : Recompile everything
-
-
-## Tasks Completed
+### Makefile Rules
+| Rule | Action |
+| :--- | :--- |
+| `make` | Compiles the library. |
+| `make clean` | Removes object files (`.o`). |
+| `make fclean` | Removes object files and the `.a` library. |
+| `make re` | Performs a full re-compile. |
 
 ---
-Library Content
 
-1. Part 1 — Standard C Library Reimplementations:
+## 📑 Tasks Completed
 
-Recreations of commonly used C standard functions such as:
+The library is divided into three main parts:
 
-    ft_strlen, ft_strchr, ft_strncmp, ft_strlcpy, ft_strdup
-    ft_atoi, ft_isalpha, ft_isdigit, ft_isalnum, ft_toupper
-    ft_memset, ft_memcpy, ft_memmove, ft_bzero, ft_calloc
+### 1. Standard Libc Functions 🏛️
+Recreations of common functions from `<string.h>`, `<ctype.h>`, and `<stdlib.h>`:
+- **Strings:** `ft_strlen`, `ft_strchr`, `ft_strncmp`, `ft_strlcpy`, `ft_strdup`
+- **Memory:** `ft_memset`, `ft_memcpy`, `ft_memmove`, `ft_bzero`, `ft_calloc`
+- **Tests:** `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_toupper`, `ft_atoi`
 
-2. Part 2 — Additional Utility Functions
+### 2. Additional Utility Functions 🛠️
+Useful functions that are not in the standard library:
+- `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`
+- `ft_itoa` (convert integer to string)
+- `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
 
-Functions that are not part of the standard C library but are highly useful:
+### 3. Linked List Functions (Bonus) 🔗
+A set of functions to manage simple linked lists:
+- `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`
+- `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
 
-    ft_substr, ft_strjoin, ft_strtrim, ft_split
-    ft_itoa, ft_strmapi, ft_striteri, ft_putchar_fd
-    ft_putstr_fd, ft_putendl_fd, ft_putnbr_fd
-
-3. Part 3— Linked List Functions
-
-Linked list functions:
-
-    ft_lstnew, ft_lstadd_front, ft_lstsize, ft_lstlast
-    ft_lstadd_back, ft_lstdelone, ft_lstclear, ft_lstiter, ft_lstmap
 ---
 
-## Resources 
+## 📚 Resources
 
-- Linux manual pages (man 3)
-- GNU C Library documentation
-- W3Schools.com
-- 42 intranet Libft subject
-- google search resources
-- peer on the right peer on the left and someone smart in the building
-- AI tools were used only for search resources
+- **Man pages** — `man 3` is the best friend of a C programmer.
+- **GNU C Library** documentation.
+- **42 Intranet** — Project guidelines.
+- **Peers** — For helpful feedback and "rubber ducking."
+- **AI tools** — Used only for searching documentation and resources.
+
+---
+
+## 👨‍💻 Author
+
+Created by **artavagy** as part of the 42 Yerevan curriculum.
+
+<div align="center">
+
+ [![GitHub Profile](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/arthavagyan)
+
+</div>
+
+---
